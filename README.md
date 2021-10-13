@@ -1,18 +1,18 @@
-# emt
+# EDF Mod Tool
+
+`sgott.exe` is from [zeddidragon's sgott repo](https://github.com/zeddidragon/sgott).
+
+Basic SGO JSON editor (more to come... maybe). Allows you to open SGO files and save them without manually calling `sgott.exe`
 
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm run electron:serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run electron:build
 ```
 
 ### Lints and fixes files
