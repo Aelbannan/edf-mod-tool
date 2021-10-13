@@ -22,10 +22,10 @@ import { convertSgoToJson, saveJsonAsSgo } from '@/lib/sgo';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { PrismEditor } from 'vue-prism-editor';
 import 'vue-prism-editor/dist/prismeditor.min.css';
+// @ts-expect-error: Not picking up @types/prismjs
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-json';
-import 'prismjs/themes/prism-tomorrow.css'; // import syntax highlighting styles
-
+import 'prismjs/themes/prism-tomorrow.css'; 
 
 @Component({
 	components: {
