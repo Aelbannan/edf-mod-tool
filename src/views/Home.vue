@@ -1,17 +1,16 @@
 <template>
-  <div class="home">
-    <SgoEditor />
-  </div>
+	<files-container />
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import SgoEditor from '@/components/SgoEditor.vue'; // @ is an alias to /src
+	import Vue from 'vue'
+	import FilesContainer from '../components/FilesContainer.vue'
 
-@Component({
-  components: {
-    SgoEditor,
-  },
-})
-export default class Home extends Vue {}
+	export default Vue.extend({
+		name: 'Home',
+
+		components: {
+			FilesContainer,
+		},
+	})
 </script>
