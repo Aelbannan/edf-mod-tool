@@ -1,11 +1,12 @@
 module.exports = {
-    pluginOptions: {
+	pluginOptions: {
 		electronBuilder: {
 			nodeIntegration: true
 		}
 	},
 
-    transpileDependencies: [
-      'vuetify'
-    ]
+	transpileDependencies: [
+		'vuetify',
+		'vuex-module-decorators'
+	]
 }

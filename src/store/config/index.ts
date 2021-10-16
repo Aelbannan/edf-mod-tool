@@ -1,11 +1,13 @@
-import { Folder } from "@/types/files";
+import { Languages } from "@/types/project";
 import { Action, Module, VuexModule } from "vuex-module-decorators";
+import { ConfigStoreState } from "./state";
 
 
-@Module({ name: "config", namespaced: true })
-export default class Config extends VuexModule {
-	sgottPath = ""
+@Module({ namespaced: true })
+export default class Config extends VuexModule implements ConfigStoreState {
+	sgottPath = "./temp/sgott.exe"
 	tempFolder = "./temp"
+	language = Languages.English
 
 	@Action
 	async load(): Promise<void> {

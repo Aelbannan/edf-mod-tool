@@ -20,10 +20,11 @@ const store = new Vuex.Store({
 		config: ConfigStore,
 	},
 	plugins: [
-		PersistedState.create(),
+		PersistedState.create({
+			dev: true,
+			ipc: true,
+		})
 	]
 });
 
 export default store;
-export const files = getModule(FileStore, store)
-export const config = getModule(ConfigStore, store)
