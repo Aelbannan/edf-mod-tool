@@ -1,7 +1,9 @@
 import { app, BrowserWindow, Menu } from "electron"
 import { getFileMetadataFromUser } from "@/lib/file/main";
 import { electronStore } from "@/store/electron";
-
+import fs from 'fs'
+import path from 'path'
+import { PathLike } from "original-fs";
 
 function initialize() {
 	console.log('initialize')	

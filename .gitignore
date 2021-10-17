@@ -26,4 +26,4 @@ pnpm-debug.log*
 /dist_electron
 
 #Ignore JSON files in temp
-temp/*.json
+temp/*
