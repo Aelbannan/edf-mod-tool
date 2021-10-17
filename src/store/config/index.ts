@@ -5,7 +5,7 @@ import { ConfigStoreState } from "./state";
 
 @Module({ namespaced: true })
 export default class Config extends VuexModule implements ConfigStoreState {
-	sgottPath = "./temp/sgott.exe"
+	sgottPath = "./resources/sgott.exe"
 	tempFolder = "./temp"
 	language = Languages.English
 
