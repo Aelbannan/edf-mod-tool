@@ -14,7 +14,7 @@ export async function convertAndLoadSGOFile(file: File): Promise<string> {
 	const { config } = await electronStore.getState();
 	const jsonPath = path.resolve(`${config.tempFolder}/${file.name}.json`);
 	
-	await execAsync(`${path.resolve(config.sgottPath)} "${file.path}" ${jsonPath}`);
+	await execAsync(`"${path.resolve(config.sgottPath)}" "${file.path}" "${jsonPath}"`);
 
 	const data = readFileSync(jsonPath).toString();
 	return data.replaceAll("  ", "\t")
@@ -28,6 +28,6 @@ export async function saveAndConvertSGOFile(file: File, data: string): Promise<v
 
 	await writeFileSync(jsonPath, data);
 
-	await execAsync(`${path.resolve(config.sgottPath)} ${jsonPath} "${file.path}"`);
+	await execAsync(`"${path.resolve(config.sgottPath)}" "${jsonPath}" "${file.path}"`);
 }
 ipcMain.handle(SAVE_SGO, async (event: IpcMainInvokeEvent, file: File, data: string) => saveAndConvertSGOFile(file, data));
