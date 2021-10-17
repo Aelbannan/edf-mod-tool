@@ -19,6 +19,10 @@
 		</v-app-bar>
 
 		<v-main app>
+			<div v-if="$store.state.files.groups.length === 0">
+				Open a file to get started.
+			</div>
+
 			<v-tabs-items
 				v-model="activeTabIndex"
 			>

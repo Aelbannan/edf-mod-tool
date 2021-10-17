@@ -10,8 +10,14 @@ export function convertPathToFileMetadata(filepath: string): FileMetadata {
 	}
 }
 
+// TODO: make filters flexible
 export async function getFileMetadataFromUser(): Promise<FileMetadata> {
-	const res = await dialog.showOpenDialog({ properties: ['openFile'] });
+	const res = await dialog.showOpenDialog({ 
+		properties: ['openFile'], 
+		filters: [
+			{ name: "SGO", extensions: ["sgo"] }
+		] 
+	});
 	return convertPathToFileMetadata(res.filePaths[0])
 }
 

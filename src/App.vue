@@ -15,8 +15,6 @@ import FilesContainer from '@/components/FilesContainer.vue'
 	}
 })
 export default class App extends Vue {
-	mounted() {
-		console.log(this.$store)
-	}
+
 }
 </script>

@@ -21,7 +21,7 @@ const store = new Vuex.Store({
 	},
 	plugins: [
 		PersistedState.create({
-			dev: true,
+			dev: true, // TODO: refactor files to allow persistent storage
 			ipc: true,
 		})
 	]
